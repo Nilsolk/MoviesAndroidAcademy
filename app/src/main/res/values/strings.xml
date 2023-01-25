@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MoviesAndroidAcademy</string>
+    <string name="background">background</string>
+    <string name="_13">13+</string>
+    <string name="back">Back</string>
+    <string name="row">row</string>
+    <string name="avengers_end_game">Avengers: End Game</string>
+    <string name="action_adventure_fantasy">Action,Adventure,Fantasy</string>
+    <string name="_125_reviews">125 reviews</string>
+    <string name="fifth">fifth</string>
+    <string name="fought">fought</string>
+    <string name="third">third</string>
+    <string name="second">second</string>
+    <string name="first">first</string>
 </resources>
