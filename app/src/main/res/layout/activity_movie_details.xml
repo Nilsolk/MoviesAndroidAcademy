@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="#191926">
@@ -13,7 +14,8 @@
         android:contentDescription="@string/background"
         android:scaleType="fitStart"
         android:src="@drawable/_159882fd7d1a53192ba7e58f174971e"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
 
     <ImageView
         android:id="@+id/row"
@@ -37,7 +39,7 @@
 
     <TextView
         android:id="@+id/age"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_13"
         android:textColor="@color/white"
@@ -67,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+        app:layout_constraintGuide_percent="0.04136253" />
 
     <TextView
         android:id="@+id/genre"
@@ -138,12 +140,77 @@
         app:layout_constraintStart_toEndOf="@+id/fifthStar"
         app:layout_constraintTop_toBottomOf="@id/genre" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/reviews" />
+    <TextView
+        android:id="@+id/storyline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/storyline"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/reviews" />
 
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/avengers_description"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/storyline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96107054" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/description">
+
+        <ImageView
+            android:id="@+id/robert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/_f8f5ec204f1a37e0e15e2a731ab190a" />
+
+        <ImageView
+            android:id="@+id/chris"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/_c9007d7ca26a2d00d93fe8d18c89643" />
+
+        <ImageView
+            android:id="@+id/mark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/eeb8d6e5b9c059a681dcbe67501dceae" />
+
+        <ImageView
+            android:id="@+id/chrisH"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/f56e2ec650a0ee6e64c9b1356e383bb3" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
