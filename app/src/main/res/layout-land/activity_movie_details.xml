@@ -12,9 +12,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:adjustViewBounds="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:contentDescription="@string/background"
             android:src="@drawable/_159882fd7d1a53192ba7e58f174971e"
             app:layout_constraintTop_toTopOf="parent" />
@@ -199,8 +199,11 @@
             android:contentDescription="@string/robert_downey_jr"
             android:scaleType="centerCrop"
             android:src="@drawable/_f8f5ec204f1a37e0e15e2a731ab190a"
+            app:layout_constraintEnd_toStartOf="@+id/chris"
             app:layout_constraintHeight_percent="0.21"
-            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/guideline5"
             app:layout_constraintTop_toBottomOf="@+id/cast"
             app:layout_constraintWidth_percent="0.21" />
 
@@ -214,7 +217,9 @@
             android:scaleType="centerCrop"
             android:src="@drawable/_c9007d7ca26a2d00d93fe8d18c89643"
             app:layout_constraintBottom_toBottomOf="@+id/robert"
+            app:layout_constraintEnd_toStartOf="@+id/mark"
             app:layout_constraintHeight_percent="0.21"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/robert"
             app:layout_constraintTop_toTopOf="@+id/robert"
             app:layout_constraintWidth_percent="0.21" />
@@ -229,7 +234,9 @@
             android:scaleType="centerCrop"
             android:src="@drawable/eeb8d6e5b9c059a681dcbe67501dceae"
             app:layout_constraintBottom_toBottomOf="@+id/chris"
+            app:layout_constraintEnd_toStartOf="@+id/chrisH"
             app:layout_constraintHeight_percent="0.21"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/chris"
             app:layout_constraintTop_toTopOf="@+id/chris"
             app:layout_constraintWidth_percent="0.21" />
@@ -244,7 +251,9 @@
             android:scaleType="centerCrop"
             android:src="@drawable/f56e2ec650a0ee6e64c9b1356e383bb3"
             app:layout_constraintBottom_toBottomOf="@+id/mark"
+            app:layout_constraintEnd_toStartOf="@id/guideline6"
             app:layout_constraintHeight_percent="0.21"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/mark"
             app:layout_constraintTop_toTopOf="@+id/mark"
             app:layout_constraintWidth_percent="0.21" />
