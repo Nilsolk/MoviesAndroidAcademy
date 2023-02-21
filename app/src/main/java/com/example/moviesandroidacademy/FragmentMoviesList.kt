@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 
 class FragmentMoviesList : Fragment() {
@@ -18,7 +18,7 @@ class FragmentMoviesList : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val card = view.findViewById<CardView>(R.id.avengers)
+        val card = view.findViewById<ConstraintLayout>(R.id.movies_list)
         card.setOnClickListener {
             val newFragmentMoviesDetails = FragmentMoviesDetails()
             parentFragmentManager.beginTransaction().apply {

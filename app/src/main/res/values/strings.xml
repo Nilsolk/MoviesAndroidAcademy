@@ -21,4 +21,8 @@
     <string name="chris_hemsworth">Chris Hemsworth</string>
     <string name="robertjr">RobertJr</string>
     <string name="movieslist">MoviesList</string>
+    <string name="time">137 min</string>
+    <string name="reviews">125 Reviews</string>
+    <string name="genre">Action, Adventure, Drama</string>
+    <string name="liked_films">liked films</string>
 </resources>

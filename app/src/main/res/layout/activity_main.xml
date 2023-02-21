@@ -8,8 +8,8 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentsPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:name="com.example.moviesandroidacademy.FragmentMoviesList"
         tools:layout="@layout/fragment_movies_list" />
 </FrameLayout>
