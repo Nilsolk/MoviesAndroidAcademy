@@ -22,10 +22,10 @@ class FragmentMoviesList : Fragment() {
         card.setOnClickListener {
             val newFragmentMoviesDetails = FragmentMoviesDetails()
             parentFragmentManager.beginTransaction().apply {
-                addToBackStack("MovieFragment")
                 replace(R.id.fragmentsPlace, newFragmentMoviesDetails)
                 commit()
             }
         }
     }
+
 }

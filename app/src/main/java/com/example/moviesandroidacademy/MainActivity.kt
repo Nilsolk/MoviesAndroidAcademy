@@ -8,9 +8,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
-        if (savedInstanceState == null) {
-            val fragment = FragmentMoviesList()
-            supportFragmentManager.beginTransaction().add(R.id.fragmentsPlace, fragment).commit()
+        val fragment = FragmentMoviesList()
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentsPlace, fragment)
+            addToBackStack(null)
+            commit()
+
         }
     }
 }
