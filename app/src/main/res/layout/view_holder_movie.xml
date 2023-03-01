@@ -1,0 +1,139 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movies_list"
+    android:layout_width="180dp"
+    android:layout_margin="10dp"
+    android:layout_height="300dp">
+
+    <ImageView
+        android:id="@+id/avengers_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/avengers_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/_a57639f_1f12_4eef_a1a7_c8b881a967c6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="6dp"
+        android:contentDescription="@string/liked_films"
+        android:src="@drawable/baseline_heart_broken_24"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
+        app:layout_constraintTop_toTopOf="@+id/avengers_banner" />
+
+
+    <TextView
+        android:id="@+id/genres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/genre"
+        android:textColor="#FF3466"
+        app:layout_constraintBottom_toTopOf="@id/first"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
+        app:layout_constraintStart_toStartOf="@+id/avengers_banner" />
+
+
+    <ImageView
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/first"
+        android:src="@drawable/red_star"
+        app:layout_constraintStart_toStartOf="@id/avengers_banner"
+        app:layout_constraintTop_toBottomOf="@id/genres" />
+
+    <ImageView
+        android:id="@+id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/second"
+        android:src="@drawable/red_star"
+        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintStart_toEndOf="@id/first"
+        app:layout_constraintTop_toBottomOf="@id/genres" />
+
+    <ImageView
+
+        android:id="@+id/third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/third"
+        android:src="@drawable/red_star"
+        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintStart_toEndOf="@id/second"
+        app:layout_constraintTop_toBottomOf="@id/genres" />
+
+    <ImageView
+        android:id="@+id/fought"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/fought"
+        android:src="@drawable/red_star"
+        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintStart_toEndOf="@id/third"
+        app:layout_constraintTop_toBottomOf="@id/genres" />
+
+    <ImageView
+        android:id="@+id/fifth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/fifth"
+        android:src="@drawable/grey_star"
+        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintStart_toEndOf="@id/fought"
+        app:layout_constraintTop_toBottomOf="@id/genres" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="@string/reviews"
+        android:textColor="#6D6D80"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/avengers_banner_name"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
+        app:layout_constraintStart_toEndOf="@+id/fifth"
+        app:layout_constraintTop_toBottomOf="@+id/genres" />
+
+    <TextView
+        android:id="@+id/avengers_banner_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/time"
+        android:textColor="#565665"
+        app:layout_constraintBottom_toBottomOf="@id/avengers_banner"
+        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
+        app:layout_constraintStart_toStartOf="@+id/avengers_banner" />
+
+
+    <TextView
+        android:id="@+id/avengers_banner_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="@string/avengers_end_game"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/avengers_banner_time"
+        app:layout_constraintEnd_toEndOf="@id/avengers_banner"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="@id/avengers_banner" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
