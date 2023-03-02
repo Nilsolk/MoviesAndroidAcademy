@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Avengers">
+        <item name="name"> Avengers : End Game</item>
+        <item name="genre">Action, Adventure, Drama </item>
+        <item name="reviews">125 Reviews</item>
+        <item name="time">137 min</item>
+    </string-array>
+    <string-array name="Tenet">
+        <item name="name"> Tenet</item>
+        <item name="genre">Action, Sci-Fi, Thriller  </item>
+        <item name="reviews">98 Reviews</item>
+        <item name="time">97 min</item>
+    </string-array>
+    <string-array name="BlackWidow">
+        <item name="name"> Black Widow</item>
+        <item name="genre">Action, Adventure, Sci-Fi</item>
+        <item name="reviews">38 Reviews</item>
+        <item name="time">102 min</item>
+    </string-array>
+    <string-array name="WonderWoman">
+        <item name="name"> Wonder Woman 1984</item>
+        <item name="genre">Action, Adventure, Fantasy</item>
+        <item name="reviews">74 Reviews</item>
+        <item name="time">120 min</item>
+    </string-array>
+
+</resources>

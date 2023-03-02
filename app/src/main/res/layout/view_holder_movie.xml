@@ -6,7 +6,7 @@
     android:layout_height="300dp">
 
     <ImageView
-        android:id="@+id/avengers_banner"
+        android:id="@+id/banner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/avengers_description"
@@ -22,8 +22,8 @@
         android:layout_marginEnd="6dp"
         android:contentDescription="@string/liked_films"
         android:src="@drawable/baseline_heart_broken_24"
-        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
-        app:layout_constraintTop_toTopOf="@+id/avengers_banner" />
+        app:layout_constraintEnd_toEndOf="@+id/banner"
+        app:layout_constraintTop_toTopOf="@+id/banner" />
 
 
     <TextView
@@ -35,8 +35,8 @@
         android:text="@string/genre"
         android:textColor="#FF3466"
         app:layout_constraintBottom_toTopOf="@id/first"
-        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
-        app:layout_constraintStart_toStartOf="@+id/avengers_banner" />
+        app:layout_constraintEnd_toEndOf="@+id/banner"
+        app:layout_constraintStart_toStartOf="@+id/banner" />
 
 
     <ImageView
@@ -47,7 +47,7 @@
         android:layout_marginStart="8dp"
         android:contentDescription="@string/first"
         android:src="@drawable/red_star"
-        app:layout_constraintStart_toStartOf="@id/avengers_banner"
+        app:layout_constraintStart_toStartOf="@id/banner"
         app:layout_constraintTop_toBottomOf="@id/genres" />
 
     <ImageView
@@ -57,7 +57,7 @@
         android:layout_margin="5dp"
         android:contentDescription="@string/second"
         android:src="@drawable/red_star"
-        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintBottom_toTopOf="@id/banner_name"
         app:layout_constraintStart_toEndOf="@id/first"
         app:layout_constraintTop_toBottomOf="@id/genres" />
 
@@ -69,7 +69,7 @@
         android:layout_margin="5dp"
         android:contentDescription="@string/third"
         android:src="@drawable/red_star"
-        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintBottom_toTopOf="@id/banner_name"
         app:layout_constraintStart_toEndOf="@id/second"
         app:layout_constraintTop_toBottomOf="@id/genres" />
 
@@ -80,7 +80,7 @@
         android:layout_margin="5dp"
         android:contentDescription="@string/fought"
         android:src="@drawable/red_star"
-        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintBottom_toTopOf="@id/banner_name"
         app:layout_constraintStart_toEndOf="@id/third"
         app:layout_constraintTop_toBottomOf="@id/genres" />
 
@@ -91,7 +91,7 @@
         android:layout_margin="5dp"
         android:contentDescription="@string/fifth"
         android:src="@drawable/grey_star"
-        app:layout_constraintBottom_toTopOf="@id/avengers_banner_name"
+        app:layout_constraintBottom_toTopOf="@id/banner_name"
         app:layout_constraintStart_toEndOf="@id/fought"
         app:layout_constraintTop_toBottomOf="@id/genres" />
 
@@ -102,13 +102,13 @@
         android:text="@string/reviews"
         android:textColor="#6D6D80"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/avengers_banner_name"
-        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
+        app:layout_constraintBottom_toTopOf="@+id/banner_name"
+        app:layout_constraintEnd_toEndOf="@+id/banner"
         app:layout_constraintStart_toEndOf="@+id/fifth"
         app:layout_constraintTop_toBottomOf="@+id/genres" />
 
     <TextView
-        android:id="@+id/avengers_banner_time"
+        android:id="@+id/banner_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
@@ -116,24 +116,24 @@
         android:paddingEnd="5dp"
         android:text="@string/time"
         android:textColor="#565665"
-        app:layout_constraintBottom_toBottomOf="@id/avengers_banner"
-        app:layout_constraintEnd_toEndOf="@+id/avengers_banner"
-        app:layout_constraintStart_toStartOf="@+id/avengers_banner" />
+        app:layout_constraintBottom_toBottomOf="@id/banner"
+        app:layout_constraintEnd_toEndOf="@+id/banner"
+        app:layout_constraintStart_toStartOf="@+id/banner" />
 
 
     <TextView
-        android:id="@+id/avengers_banner_name"
+        android:id="@+id/banner_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:gravity="center"
         android:text="@string/avengers_end_game"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/avengers_banner_time"
-        app:layout_constraintEnd_toEndOf="@id/avengers_banner"
+        app:layout_constraintBottom_toTopOf="@+id/banner_time"
+        app:layout_constraintEnd_toEndOf="@id/banner"
         app:layout_constraintHorizontal_bias="0.0"
 
-        app:layout_constraintStart_toStartOf="@id/avengers_banner" />
+        app:layout_constraintStart_toStartOf="@id/banner" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

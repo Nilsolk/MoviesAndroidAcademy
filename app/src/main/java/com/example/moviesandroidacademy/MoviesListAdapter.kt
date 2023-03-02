@@ -1,23 +1,39 @@
 package com.example.moviesandroidacademy
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class MoviesListAdapter : RecyclerView.Adapter<MoviesViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
-        TODO("Not yet implemented")
+    private val movies = mutableListOf<Movie>()
+    fun setData(newData: List<Movie>) {
+        movies.clear()
+        movies.addAll(newData)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
+        return MoviesViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.view_holder_movie, parent, false)
+        )
     }
+
+    override fun getItemCount() = movies.size
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bindData(movies[position])
     }
 }
 
 class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+    fun bindData(movie: Movie) {
+        val params = movie.returnValues()
+        itemView.findViewById<ImageView>(R.id.banner).setImageResource(movie.getImage())
+        itemView.findViewById<TextView>(R.id.banner_name).text = params[0]
+        itemView.findViewById<TextView>(R.id.genres).text = params[1]
+        itemView.findViewById<TextView>(R.id.banner_time).text = params[3]
+        itemView.findViewById<TextView>(R.id.reviews).text = params[2]
+    }
 }

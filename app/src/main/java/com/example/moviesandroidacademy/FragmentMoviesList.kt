@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 
 class FragmentMoviesList : Fragment() {
     override fun onCreateView(
@@ -18,14 +18,17 @@ class FragmentMoviesList : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val card = view.findViewById<ConstraintLayout>(R.id.movies_list)
-        card.setOnClickListener {
-            val newFragmentMoviesDetails = FragmentMoviesDetails()
-            parentFragmentManager.beginTransaction().apply {
-                replace(R.id.fragmentsPlace, newFragmentMoviesDetails)
-                commit()
-            }
-        }
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.movieRecyclerView)
+        val adapter = MoviesListAdapter()
+        val moviesService = MovieService.Base(this).generateMoviesList()
+        adapter.setData(moviesService)
+        recyclerView.adapter = adapter
+    }
+
+    override fun onStart() {
+        super.onStart()
+
     }
 
 }
