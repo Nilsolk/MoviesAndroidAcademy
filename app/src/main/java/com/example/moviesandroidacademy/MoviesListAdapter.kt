@@ -34,6 +34,6 @@ class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.findViewById<TextView>(R.id.banner_name).text = params[0]
         itemView.findViewById<TextView>(R.id.genres).text = params[1]
         itemView.findViewById<TextView>(R.id.banner_time).text = params[3]
-        itemView.findViewById<TextView>(R.id.reviews).text = params[2]
+        itemView.findViewById<TextView>(R.id.banner_reviews).text = params[2]
     }
 }

@@ -1,6 +1,8 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/movies_list"
+    android:id="@+id/movie_recycler"
     android:layout_width="180dp"
     android:layout_margin="10dp"
     android:layout_height="300dp">
@@ -12,6 +14,7 @@
         android:contentDescription="@string/avengers_description"
         android:scaleType="centerCrop"
         android:src="@drawable/_a57639f_1f12_4eef_a1a7_c8b881a967c6"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,6 +99,7 @@
         app:layout_constraintTop_toBottomOf="@id/genres" />
 
     <TextView
+        android:id="@+id/banner_reviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="3dp"
@@ -131,8 +135,6 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/banner_time"
         app:layout_constraintEnd_toEndOf="@id/banner"
-        app:layout_constraintHorizontal_bias="0.0"
-
         app:layout_constraintStart_toStartOf="@id/banner" />
 
 
