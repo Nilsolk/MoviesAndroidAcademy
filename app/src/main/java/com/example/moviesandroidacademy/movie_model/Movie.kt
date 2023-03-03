@@ -1,4 +1,4 @@
-package com.example.moviesandroidacademy
+package com.example.moviesandroidacademy.movie_model
 
 data class Movie(
     private val imageMovie: Int,

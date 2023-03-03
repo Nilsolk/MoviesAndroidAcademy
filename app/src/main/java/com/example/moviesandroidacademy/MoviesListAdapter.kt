@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moviesandroidacademy.movie_model.Movie
 
 class MoviesListAdapter : RecyclerView.Adapter<MoviesViewHolder>() {
     private val movies = mutableListOf<Movie>()

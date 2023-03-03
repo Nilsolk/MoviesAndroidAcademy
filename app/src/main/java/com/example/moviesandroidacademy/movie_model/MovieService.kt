@@ -1,7 +1,9 @@
-package com.example.moviesandroidacademy
+package com.example.moviesandroidacademy.movie_model
 
 import androidx.annotation.ArrayRes
 import androidx.annotation.DrawableRes
+import com.example.moviesandroidacademy.FragmentMoviesList
+import com.example.moviesandroidacademy.R
 
 interface MovieService {
 
