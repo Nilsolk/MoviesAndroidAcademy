@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesandroidacademy.movie_model.Movie
 
-class MoviesListAdapter : RecyclerView.Adapter<MoviesViewHolder>() {
+class MoviesListAdapter(private val clickListener: OnClickListener) :
+    RecyclerView.Adapter<MoviesViewHolder>() {
     private val movies = mutableListOf<Movie>()
     fun setData(newData: List<Movie>) {
         movies.clear()
@@ -25,6 +26,9 @@ class MoviesListAdapter : RecyclerView.Adapter<MoviesViewHolder>() {
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
         holder.bindData(movies[position])
+        holder.itemView.setOnClickListener {
+            clickListener.onClick(movies[position])
+        }
     }
 }
 
@@ -37,4 +41,8 @@ class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.findViewById<TextView>(R.id.banner_time).text = params[3]
         itemView.findViewById<TextView>(R.id.banner_reviews).text = params[2]
     }
+}
+
+interface OnClickListener {
+    fun onClick(movie: Movie)
 }

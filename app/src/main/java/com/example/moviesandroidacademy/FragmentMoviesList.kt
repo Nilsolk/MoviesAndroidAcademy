@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moviesandroidacademy.movie_model.Movie
 import com.example.moviesandroidacademy.movie_model.MovieService
 
 class FragmentMoviesList : Fragment() {
@@ -21,8 +22,18 @@ class FragmentMoviesList : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.movieRecyclerView)
-        val adapter = MoviesListAdapter()
+        val adapter = MoviesListAdapter(object : OnClickListener {
+            override fun onClick(movie: Movie) {
+                if (movie.returnValues()[0] == "Avengers : End Game") {
+                    parentFragmentManager.beginTransaction().apply {
+                        replace(R.id.fragmentsPlace, FragmentMoviesDetails())
+                        commit()
+                    }
+                }
+            }
+        })
         val moviesService = MovieService.Base(this).generateMoviesList()
+
         adapter.setData(moviesService)
         recyclerView.adapter = adapter
     }
